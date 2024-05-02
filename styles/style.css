@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("../assets/TrilhasFundo.jpg");
+  background-color: #011627;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  margin-bottom: 12px;
+}
+
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background-color: #FBFBFB;
+  padding-top: 3%;
+  padding-bottom: 1.2%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 15px 0px 0px 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container__2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 390px;
+  width: 100%;
+  background-color: #F37820;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 0px 15px 15px 0px;
+  box-shadow: -5px 0px 0px 0px #011627;
+  justify-content: space-evenly;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FBFBFB;
+  text-align: center;
+}
+
+.form__subtitulo {
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: #360e66ff;
+  text-align: center;
+}
+
+.form .input__box {
+  width: 100%;
+  color: #333;
+}
+
+.input__box input:focus {
+  box-shadow: 0 1px 0 #360e66ff;
+}
+
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+.form__input__label {
+  font-size: 15px;
+  font-weight: 400;
+  color: #360e66ff;
+}
+
+.selection__box label {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.form :where(.form__input__preenche, .drop-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 2px;
+  outline: none;
+  font-size: 0.9rem;
+  color: #360e66ff;
+  border-radius: 15px;
+  background: #f4e6dcff;
+  border: 1.2px solid #360e66ff;
+  padding: 0 15px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.form__input__label__file {
+  position: relative;
+  height: 70%;
+  width: 100%;
+  margin-top: 2.4vh;
+  font-size: 0.9rem;
+  color: #360e66ff;
+  border-radius: 15px;
+  background: #f4e6dcff;
+  border: 1.2px solid #360e66ff;
+  display: inline-block;
+  padding: 1vh 2vw;
+  cursor: pointer;
+}
+
+.form :where(.select__option, .trilhas) {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  row-gap: 5px;
+}
+
+.form :where(.select__option__num, .trilhas) {
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: -0.5%;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  row-gap: 5px;
+}
+
+.form .trilhas {
+  column-gap: 6px;
+}
+
+.form .trilhas label {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #360e66ff;
+}
+
+.trilhas input {
+  accent-color: #360e66ff;
+  width: 24px;
+  height: 24px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  content: '';
+  border: 1px solid #360e66ff;
+  cursor: pointer;
+}
+
+.drop-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #360e66ff;
+  background-color: #f4e6dcff;
+  font-size: 0.9rem;
+}
+
+textarea {
+  max-height: 70px;
+  max-width: 100%;
+  min-height: 68px;
+  min-width: 100%;
+}
+
+.container__2 input[type="submit"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  width: 70%;
+  color: #FBFBFB;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #011627;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 0px 0px #FBFBFB;
+}
+
+.container__2 input[type="submit"]:hover {
+  background-color: #360e66ff;
+}
+
+.form :where(.text__warning, .text__warning h3) {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 16px;
+  font-size: 0.7rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #E50000;
+}
+
+.file-validation-msg {
+  display: none; /* Inicialmente esconde a mensagem */
+  color: #E50000;
+  font-size: 0.7rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.container__2 .logoTrilhas {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.container__2 .aluna {
+  height: -50px;
+}
+
+.container__2__apresentacao {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FBFBFB;
+  text-align: left;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: -10px;
+}
+
+.container__2__inscricao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.container__2__declaracao__inscricao {
+  display: flex;
+  text-align: left;
+  align-items: baseline;
+  flex-direction: row;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #360e66ff;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: -50px;
+  gap: 8px;
+}
+
+.container__2__declaracao__inscricao input {
+  accent-color: #360e66ff;
+  transform: scale(1.5);
+  content: '';
+  cursor: pointer;
+}
+
+.rodape {
+  display: flex;
+  position: relative;
+  padding: 24px;
+  background-color: #F37820;
+  box-shadow: 0px -3px 0px 0px #FBFBFB;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.rodape__link {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #FBFBFB;
+  gap: 4px;
+}
+
+.popup__wrapper {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popup {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 20% auto;
+  padding: 30px 40px 30px 40px;
+  color: #360e66ff;
+  background: #FBFBFB;
+  border: 2px solid #F37820;
+  border-radius: 10px;
+}
+
+.popup__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.popup .popup__close {
+  padding: 6px 10px;
+  color: #FBFBFB;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #011627;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.popup .popup__close:hover {
+  background-color: #360e66ff;
+}
+
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+}

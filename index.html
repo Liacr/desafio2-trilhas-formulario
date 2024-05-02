@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de inscrição Trilhas Inova</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <main>
+    <section class="container">
+      <form id="formulario" action="#" class="form">
+
+        <h2 class="form__subtitulo">Informações Pessoais</h2>
+        <div class="input__box">
+          <label class="form__input__label">Nome Completo*</label>
+          <input class="form__input__preenche" type="text" placeholder="Insira seu nome completo"
+            pattern="[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]+$" maxlength="50" required>
+        </div>
+
+        <div class="input__box">
+          <label class="form__input__label">E-mail*</label>
+          <input class="form__input__preenche" type="email" placeholder="Exemplo: email@email.com"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+        </div>
+
+        <div class="column">
+          <div class="input__box">
+            <label class="form__input__label">Telefone Celular*</label>
+            <input class="form__input__preenche" type="tel" placeholder="Exemplo: (99) 99999-9999" maxlength="15"
+              pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" required>
+          </div>
+
+          <div class="input__box">
+            <label class="form__input__label">Data de Nascimento*</label>
+            <input class="form__input__preenche" type="date" max="2008-04-01" max="1926-01-01" required>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input__box">
+            <label class="form__input__label">CPF*</label>
+            <input class="form__input__preenche" type="text" placeholder="Exemplo: xxx.xxx.xxx-xx"
+              pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+          </div>
+
+          <div class="input__box">
+            <label class="form__input__label__file" for="file-upload1">
+              <img id="upload-icon1" src="./assets/uploadFile.svg">
+              Documento de identidade (PDF)*
+            </label>
+            <input id="file-upload1" type="file" accept="application/pdf" required>
+            <span class="file-validation-msg">Você deve enviar um arquivo.</span>
+          </div>
+        </div>
+
+        <h2 class="form__subtitulo">Informações de Endereço</h2>
+        <div class="input__box">
+          <label class="form__input__label">Endereço*</label>
+          <input class="form__input__preenche" placeholder="Insira seu endereço" type="text" required>
+        </div>
+
+        <div class="column">
+          <div class="input__box">
+            <label class="form__input__label">Bairro*</label>
+            <input class="form__input__preenche" placeholder="Insira apenas o seu Bairro" type="text"
+              pattern="[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]+$" required>
+          </div>
+
+          <div class="input__box">
+            <label class="form__input__label">Cidade*</label>
+            <input class="form__input__preenche" placeholder="Insira a cidade que você mora" type="text"
+              pattern="[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]+$" required>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input__box">
+            <label class="form__input__label">Estado*</label>
+            <input class="form__input__preenche" placeholder="Insira o Estado que você reside" type="text"
+              pattern="[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]+$" required>
+          </div>
+
+          <div class="input__box">
+            <label class="form__input__label__file" for="file-upload2">
+              <img id="upload-icon2" src="./assets/uploadFile.svg">
+              Comprovante de Residência (PDF)*
+            </label>
+            <input id="file-upload2" type="file" accept="application/pdf" required>
+            <span class="file-validation-msg">Você deve enviar um arquivo.</span>
+          </div>
+        </div>
+
+        <h2 class="form__subtitulo">Escolaridade e Certificado</h2>
+
+        <div class="column">
+          <div class="input__box">
+            <label class="form__input__label">Grau de Escolaridade*</label>
+            <div class="drop-box">
+              <select>
+                <option>Ensino Médio</option>
+                <option>Ensino Superior</option>
+                <option>Pós-Graduado</option>
+                <option>Mestrado</option>
+                <option>Doutorado</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input__box">
+            <label class="form__input__label__file" for="file-upload3">
+              <img id="upload-icon3" src="./assets/uploadFile.svg">
+              Certificado do ensino médio ou declaração da escola (PDF)*
+            </label>
+            <input id="file-upload3" type="file" accept="application/pdf" required>
+            <span class="file-validation-msg">Você deve enviar um arquivo.</span>
+          </div>
+        </div>
+
+        <h2 class="form__subtitulo">Formação em Tecnologia</h2>
+
+        <div class="selection__box">
+          <label class="form__input__label">Qual área da tecnologia você tem interesse aprender?*</label>
+
+          <div class="select__option">
+            <div class="trilhas">
+              <input type="radio" id="check-back" name="trilhas" required>
+              <label for="check-back">Back End</label>
+            </div>
+            <div class="trilhas">
+              <input type="radio" id="check-dados" name="trilhas" required>
+              <label for="check-dados">Dados</label>
+            </div>
+            <div class="trilhas">
+              <input type="radio" id="check-ux" name="trilhas" required>
+              <label for="check-ux">UX Design</label>
+            </div>
+            <div class="trilhas">
+              <input type="radio" id="check-front" name="trilhas" required>
+              <label for="check-front">Front End</label>
+            </div>
+            <div class="trilhas">
+              <input type="radio" id="check-jogos" name="trilhas" required>
+              <label for="check-jogos">Jogos</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="selection__box">
+          <label class="form__input__label">Em uma escala de 1 a 5 (sendo 1: nenhum e 5: avançado), qual seu nível de
+            conhecimento na área selecionada anteriormente?*</label>
+
+          <div class="select__option__num">
+            <div class="trilhas">
+              <input type="radio" id="check-1" name="conhecimento" required>
+              <label for="check-1">1</label>
+            </div>
+            <div class="trilhas">
+              <input type="radio" id="check-2" name="conhecimento" required>
+              <label for="check-2">2</label>
+            </div>
+            <div class="trilhas">
+              <input type="radio" id="check-3" name="conhecimento" required>
+              <label for="check-3">3</label>
+            </div>
+            <div class="trilhas">
+              <input type="radio" id="check-4" name="conhecimento" required>
+              <label for="check-4">4</label>
+            </div>
+            <div class="trilhas">
+              <input type="radio" id="check-5" name="conhecimento" required>
+              <label for="check-5">5</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input__box">
+          <label class="form__input__label">O que te motiva a participar do programa?*</label>
+          <textarea class="form__input__preenche" placeholder="Escreva um pequeno texto..." maxlength="160"
+            required></textarea>
+        </div>
+
+        <div class="text__warning">
+          <h3>Por favor, revise todas as insformações antes de enviar</h3>
+          <h3>*Campo obrigatório</h3>
+        </div>
+      </form>
+    </section>
+
+    <div class="container__2">
+      <h2>Formulário de Inscrição</h2>
+      <img class="logoTrilhas" src="./assets/logoTrilhas.svg" alt="Logo Trilhas">
+
+      <div class="container__2__apresentacao">
+        <p>O objetivo do Programa Trilhas Inova é capacitar pessoas, a partir de 16 anos, em formação tecnológica, nas
+          áreas de programação, design, análise de dados e carreiras, possibilitando uma visão empreendedora, atender as
+          demandas locais, nacionais e internacionais, para fomentar empregabilidade e justiça social.</p>
+      </div>
+
+      <img class="aluna" src="./assets/aluna1.svg" alt="Imagem em vetor de uma aluna">
+
+      <div class="container__2__inscricao">
+        <div class="container__2__declaracao__inscricao">
+          <input type="checkbox" id="declaracao" form="formulario" name="inscricao" required>
+          <label for="declaracao">Declaro que li todo o Edital e que todas as informações fornecidas por mim neste
+            formulário são verdadeiras.</label>
+        </div>
+        <input type="submit" id="botaoEnviar" form="formulario" value="INSCREVER-SE">
+      </div>
+    </div>
+    <div class="popup__wrapper">
+      <div class="popup">
+        <div class="popup__content">
+          <h3>Inscrição realizada!</h3>
+          <p>Fique atento ao seu e-mail para prosseguir com os próximos passos caso você seja aprovado nesta etapa.</p>
+          <input type="reset" form="formulario" class="popup__close" value="OK!">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <a class="rodape__link" href="http://linkedin.com/in/lianna-ribeiro-3366b9137/">
+      <img src="./assets/linkedin.svg">
+      <p>Desenvolvido por Lianna Ribeiro</p>
+    </a>
+    <img src="./assets/secti_branco.webp" alt="Secti Logo">
+  </footer>
+
+  <script src="../scripts/uploadButton.js"></script>
+  <script src="../scripts/liberaSubmit.js"></script>
+
+</body>
+
+</html>
